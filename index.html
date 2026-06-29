@@ -1,322 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SHEIN Reward</title>
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
-
-    body{
-      background:#eef2f7;
-      display:flex;
-      justify-content:center;
-      padding:20px;
-      color:#111827;
-    }
-
-    .container{
-      width:100%;
-      max-width:520px;
-    }
-
-    .card{
-      background:#fff;
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:0 8px 30px rgba(0,0,0,0.06);
-    }
-
-    /* TOP SHEIN CARD */
-
-    .top-card{
-      background:#000;
-      color:#fff;
-      padding:34px 28px;
-      position:relative;
-    }
-
-    .reward-badge{
-      position:absolute;
-      top:22px;
-      right:22px;
-      background:#fff;
-      color:#000;
-      padding:10px 16px;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:700;
-    }
-
-    .logo{
-      font-size:34px;
-      font-weight:800;
-      letter-spacing:5px;
-      margin-bottom:34px;
-    }
-
-    .amount{
-      font-size:74px;
-      font-weight:800;
-      line-height:1;
-    }
-
-    .reward-text{
-      font-size:24px;
-      color:#d1d5db;
-      margin-top:10px;
-    }
-
-    /* CONTENT */
-
-    .content{
-      padding:28px;
-    }
-
-    .badge{
-      width:max-content;
-      margin:auto;
-      padding:10px 18px;
-      border:1px solid #ddd;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:700;
-      color:#555;
-      margin-bottom:24px;
-    }
-
-    h1{
-      text-align:center;
-      font-size:42px;
-      line-height:1.15;
-      margin-bottom:16px;
-      font-weight:800;
-    }
-
-    .sub{
-      text-align:center;
-      color:#6b7280;
-      font-size:17px;
-      line-height:1.5;
-      margin-bottom:28px;
-    }
-
-    /* STEPS */
-
-    .step{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      background:#f7f7f9;
-      border:1px solid #ececec;
-      border-radius:22px;
-      padding:20px;
-      margin-bottom:14px;
-    }
-
-    .number{
-      min-width:54px;
-      height:54px;
-      border-radius:50%;
-      background:linear-gradient(180deg,#4ea1ff,#0066ff);
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:24px;
-      font-weight:700;
-    }
-
-    .step-text{
-      font-size:18px;
-      font-weight:600;
-      line-height:1.4;
-    }
-
-    /* BUTTON */
-
-    .btn{
-      display:block;
-      width:100%;
-      text-align:center;
-      text-decoration:none;
-      background:linear-gradient(180deg,#4ea1ff,#0066ff);
-      color:#fff;
-      padding:20px;
-      border-radius:22px;
-      font-size:26px;
-      font-weight:700;
-      margin-top:24px;
-    }
-
-    .bottom{
-      text-align:center;
-      color:#777;
-      font-size:14px;
-      line-height:1.7;
-      margin-top:18px;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:600px){
-
-      .top-card{
-        padding:28px 22px;
-      }
-
-      .content{
-        padding:22px;
-      }
-
-      h1{
-        font-size:34px;
-      }
-
-      .amount{
-        font-size:58px;
-      }
-
-      .reward-text{
-        font-size:20px;
-      }
-
-      .btn{
-        font-size:22px;
-      }
-
-      .step-text{
-        font-size:16px;
-      }
-    }
-
-    @media(max-width:420px){
-
-      h1{
-        font-size:30px;
-      }
-
-      .logo{
-        font-size:28px;
-      }
-
-      .amount{
-        font-size:50px;
-      }
-
-      .number{
-        min-width:48px;
-        height:48px;
-        font-size:20px;
-      }
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <div class="card">
-
-      <!-- TOP CARD -->
-
-      <div class="top-card">
-
-        <div class="reward-badge">
-          $100 REWARD
-        </div>
-
-        <div class="logo">
-          SHEIN
-        </div>
-
-        <div class="amount">
-          $100
-        </div>
-
-        <div class="reward-text">
-          Shopping Reward
-        </div>
-
-      </div>
-
-      <!-- CONTENT -->
-
-      <div class="content">
-
-        <div class="badge">
-          LIMITED REWARD ACCESS
-        </div>
-
-        <h1>
-          Follow the steps below to receive your reward
-        </h1>
-
-        <div class="sub">
-          Complete each step to qualify. Verification is required before your reward is issued.
-        </div>
-
-        <!-- STEPS -->
-
-        <div class="step">
-          <div class="number">1</div>
-
-          <div class="step-text">
-            Click the button below
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="number">2</div>
-
-          <div class="step-text">
-            Enter your email & basic info
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="number">3</div>
-
-          <div class="step-text">
-            Complete 3 to 5 required deals
-          </div>
-        </div>
-
-        <div class="step">
-          <div class="number">4</div>
-
-          <div class="step-text">
-            Receive your reward once verified
-          </div>
-        </div>
-
-        <!-- ADD YOUR CPA LINK -->
-
-        <a href="https://trksy.org/aff_c?offer_id=365&aff_id=181591" class="btn">
-          Get Started
-        </a>
-
-        <div class="bottom">
-          Available in selected countries — US, UK, AU, CA
-          <br><br>
-          Verified &nbsp;&nbsp; Secure Access &nbsp;&nbsp; Limited Time
-        </div>
-
-      </div>
-
+<style>
+  .lp-wrap{max-width:560px;margin:0 auto;padding:2rem 1rem 3rem;}
+  .hero{text-align:center;padding:3rem 1rem 2.5rem;}
+  .pill{display:inline-block;background:var(--bg-success);color:var(--text-success);font-size:12px;font-weight:500;padding:5px 14px;border-radius:999px;margin-bottom:1.5rem;letter-spacing:.04em;}
+  .amount-ring{width:120px;height:120px;border-radius:50%;border:2px solid var(--border-accent);background:var(--bg-accent);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.5rem;}
+  .amount-ring span:first-child{font-size:32px;font-weight:500;color:var(--text-accent);line-height:1;}
+  .amount-ring span:last-child{font-size:11px;color:var(--text-accent);margin-top:2px;}
+  .hero h1{font-size:28px;font-weight:500;color:var(--text-primary);line-height:1.3;margin:0 0 .75rem;}
+  .hero p{font-size:15px;color:var(--text-secondary);line-height:1.7;margin:0;}
+  .divider{border:none;border-top:0.5px solid var(--border);margin:0 0 2rem;}
+  .steps{display:flex;flex-direction:column;gap:0;}
+  .step-row{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:0.5px solid var(--border);}
+  .step-row:last-child{border-bottom:none;}
+  .step-num{min-width:32px;height:32px;border-radius:50%;background:var(--surface-1);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:var(--text-secondary);flex-shrink:0;margin-top:1px;}
+  .step-body{flex:1;}
+  .step-title{font-size:15px;font-weight:500;color:var(--text-primary);margin:0 0 3px;}
+  .step-desc{font-size:13px;color:var(--text-secondary);margin:0;line-height:1.5;}
+  .cta-wrap{margin:2rem 0 1rem;}
+  .cta-btn{display:block;width:100%;text-align:center;text-decoration:none;background:var(--fill-accent);color:var(--on-accent);padding:15px;border-radius:12px;font-size:16px;font-weight:500;}
+  .trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+  .trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);}
+  .footer-note{text-align:center;color:var(--text-muted);font-size:12px;margin-top:1.5rem;line-height:1.6;}
+</style>
+
+<div class="lp-wrap">
+
+  <div class="hero">
+    <div class="pill"><i class="ti ti-clock" style="font-size:11px;vertical-align:-1px;margin-right:4px" aria-hidden="true"></i>Limited time offer</div>
+    <div class="amount-ring">
+      <span>$100</span>
+      <span>reward</span>
     </div>
-
+    <h1>Claim your $100 shopping reward</h1>
+    <p>Available to residents in the US, UK, AU, and CA. Complete a few quick steps to verify and receive your reward.</p>
   </div>
 
-</body>
-</html>
+  <hr class="divider">
+
+  <div class="steps">
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <p class="step-title">Click the button below</p>
+        <p class="step-desc">Tap "Get my reward" to start your claim.</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <p class="step-title">Enter your details</p>
+        <p class="step-desc">Provide your email and basic info for verification.</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <p class="step-title">Complete 3–5 required deals</p>
+        <p class="step-desc">Unlock your reward by completing a handful of qualifying offers.</p>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <p class="step-title">Receive your reward</p>
+        <p class="step-desc">Once verified, your $100 reward is on its way.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-wrap">
+    <a href="https://trksy.org/aff_c?offer_id=365&aff_id=181591" class="cta-btn">Get my reward <i class="ti ti-arrow-right" style="font-size:15px;vertical-align:-2px;margin-left:4px" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="trust">
+    <span class="trust-item"><i class="ti ti-shield-check" style="font-size:14px" aria-hidden="true"></i> Verified</span>
+    <span class="trust-item"><i class="ti ti-lock" style="font-size:14px" aria-hidden="true"></i> Secure</span>
+    <span class="trust-item"><i class="ti ti-world" style="font-size:14px" aria-hidden="true"></i> US · UK · AU · CA</span>
+  </div>
+
+  <p class="footer-note">Verification required. Reward issued after all steps are completed.</p>
+
+</div>
