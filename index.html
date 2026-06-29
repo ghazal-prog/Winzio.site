@@ -1,83 +1,114 @@
 
 <style>
-  .lp-wrap{max-width:560px;margin:0 auto;padding:2rem 1rem 3rem;}
-  .hero{text-align:center;padding:3rem 1rem 2.5rem;}
-  .pill{display:inline-block;background:var(--bg-success);color:var(--text-success);font-size:12px;font-weight:500;padding:5px 14px;border-radius:999px;margin-bottom:1.5rem;letter-spacing:.04em;}
-  .amount-ring{width:120px;height:120px;border-radius:50%;border:2px solid var(--border-accent);background:var(--bg-accent);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.5rem;}
-  .amount-ring span:first-child{font-size:32px;font-weight:500;color:var(--text-accent);line-height:1;}
-  .amount-ring span:last-child{font-size:11px;color:var(--text-accent);margin-top:2px;}
-  .hero h1{font-size:28px;font-weight:500;color:var(--text-primary);line-height:1.3;margin:0 0 .75rem;}
-  .hero p{font-size:15px;color:var(--text-secondary);line-height:1.7;margin:0;}
-  .divider{border:none;border-top:0.5px solid var(--border);margin:0 0 2rem;}
-  .steps{display:flex;flex-direction:column;gap:0;}
-  .step-row{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:0.5px solid var(--border);}
-  .step-row:last-child{border-bottom:none;}
-  .step-num{min-width:32px;height:32px;border-radius:50%;background:var(--surface-1);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:500;color:var(--text-secondary);flex-shrink:0;margin-top:1px;}
-  .step-body{flex:1;}
-  .step-title{font-size:15px;font-weight:500;color:var(--text-primary);margin:0 0 3px;}
-  .step-desc{font-size:13px;color:var(--text-secondary);margin:0;line-height:1.5;}
-  .cta-wrap{margin:2rem 0 1rem;}
-  .cta-btn{display:block;width:100%;text-align:center;text-decoration:none;background:var(--fill-accent);color:var(--on-accent);padding:15px;border-radius:12px;font-size:16px;font-weight:500;}
-  .trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
-  .trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);}
-  .footer-note{text-align:center;color:var(--text-muted);font-size:12px;margin-top:1.5rem;line-height:1.6;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .page{font-family:var(--font-sans);max-width:580px;margin:0 auto;padding:1.5rem 1rem 3rem;}
+
+  .hero{text-align:center;padding:2.5rem 1rem 2rem;}
+  .badge{display:inline-flex;align-items:center;gap:6px;background:#fff7ed;color:#92400e;border:0.5px solid #fcd34d;font-size:12px;font-weight:500;padding:5px 14px;border-radius:999px;margin-bottom:1.75rem;}
+  .badge i{font-size:13px;}
+
+  .reward-circle{width:130px;height:130px;border-radius:50%;background:linear-gradient(145deg,#1e3a5f,#2563eb);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.75rem;position:relative;}
+  .reward-circle::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1.5px dashed #93c5fd;opacity:.5;}
+  .reward-circle .val{font-size:36px;font-weight:600;color:#fff;line-height:1;}
+  .reward-circle .lbl{font-size:11px;color:#bfdbfe;margin-top:3px;letter-spacing:.06em;text-transform:uppercase;}
+
+  .hero h1{font-size:30px;font-weight:600;color:var(--text-primary);line-height:1.25;margin-bottom:.75rem;}
+  .hero p{font-size:15px;color:var(--text-secondary);line-height:1.7;max-width:400px;margin:0 auto;}
+
+  .card{background:var(--surface-2);border:0.5px solid var(--border);border-radius:20px;padding:1.75rem;margin:1.75rem 0;}
+
+  .steps-label{font-size:11px;font-weight:600;color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.25rem;}
+
+  .step{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:0.5px solid var(--border);}
+  .step:last-child{border-bottom:none;padding-bottom:0;}
+  .step:first-of-type{padding-top:0;}
+
+  .step-icon{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
+  .step-icon.s1{background:#eff6ff;color:#1d4ed8;}
+  .step-icon.s2{background:#f0fdf4;color:#15803d;}
+  .step-icon.s3{background:#fdf4ff;color:#7e22ce;}
+  .step-icon.s4{background:#fff7ed;color:#c2410c;}
+
+  .step-text .title{font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:2px;}
+  .step-text .desc{font-size:13px;color:var(--text-secondary);line-height:1.5;}
+
+  .cta-btn{display:block;width:100%;text-align:center;text-decoration:none;background:#1d4ed8;color:#fff;padding:16px;border-radius:14px;font-size:17px;font-weight:600;margin:1.5rem 0 1rem;letter-spacing:.01em;}
+
+  .trust{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:1rem;}
+  .trust-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text-muted);}
+  .trust-item i{font-size:14px;color:#10b981;}
+
+  .footnote{text-align:center;font-size:11px;color:var(--text-muted);line-height:1.7;}
+  .countries{display:flex;justify-content:center;gap:10px;margin-top:.5rem;flex-wrap:wrap;}
+  .flag-pill{background:var(--surface-1);border:0.5px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-secondary);}
 </style>
 
-<div class="lp-wrap">
+<div class="page">
 
   <div class="hero">
-    <div class="pill"><i class="ti ti-clock" style="font-size:11px;vertical-align:-1px;margin-right:4px" aria-hidden="true"></i>Limited time offer</div>
-    <div class="amount-ring">
-      <span>$100</span>
-      <span>reward</span>
+    <div class="badge"><i class="ti ti-clock" aria-hidden="true"></i> Limited time offer</div>
+
+    <div class="reward-circle">
+      <span class="val">$100</span>
+      <span class="lbl">Reward</span>
     </div>
-    <h1>Claim your $100 shopping reward</h1>
-    <p>Available to residents in the US, UK, AU, and CA. Complete a few quick steps to verify and receive your reward.</p>
+
+    <h1>Your $100 shopping reward is waiting</h1>
+    <p>Complete a few quick steps to verify your eligibility and claim your reward today.</p>
   </div>
 
-  <hr class="divider">
+  <div class="card">
+    <div class="steps-label">How it works</div>
 
-  <div class="steps">
-    <div class="step-row">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <p class="step-title">Click the button below</p>
-        <p class="step-desc">Tap "Get my reward" to start your claim.</p>
+    <div class="step">
+      <div class="step-icon s1"><i class="ti ti-click" aria-hidden="true"></i></div>
+      <div class="step-text">
+        <p class="title">Click the button below</p>
+        <p class="desc">Tap "Claim your reward" to begin.</p>
       </div>
     </div>
-    <div class="step-row">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <p class="step-title">Enter your details</p>
-        <p class="step-desc">Provide your email and basic info for verification.</p>
+
+    <div class="step">
+      <div class="step-icon s2"><i class="ti ti-user" aria-hidden="true"></i></div>
+      <div class="step-text">
+        <p class="title">Enter your details</p>
+        <p class="desc">Provide your email and basic info for verification.</p>
       </div>
     </div>
-    <div class="step-row">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <p class="step-title">Complete 3–5 required deals</p>
-        <p class="step-desc">Unlock your reward by completing a handful of qualifying offers.</p>
+
+    <div class="step">
+      <div class="step-icon s3"><i class="ti ti-tag" aria-hidden="true"></i></div>
+      <div class="step-text">
+        <p class="title">Complete 3–5 qualifying deals</p>
+        <p class="desc">Unlock your reward by completing a handful of offers.</p>
       </div>
     </div>
-    <div class="step-row">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <p class="step-title">Receive your reward</p>
-        <p class="step-desc">Once verified, your $100 reward is on its way.</p>
+
+    <div class="step">
+      <div class="step-icon s4"><i class="ti ti-gift" aria-hidden="true"></i></div>
+      <div class="step-text">
+        <p class="title">Receive your $100 reward</p>
+        <p class="desc">Verified accounts receive their reward within 24–48 hours.</p>
       </div>
     </div>
   </div>
 
-  <div class="cta-wrap">
-    <a href="https://trksy.org/aff_c?offer_id=365&aff_id=181591" class="cta-btn">Get my reward <i class="ti ti-arrow-right" style="font-size:15px;vertical-align:-2px;margin-left:4px" aria-hidden="true"></i></a>
-  </div>
+  <a href="https://trksy.org/aff_c?offer_id=365&aff_id=181591" class="cta-btn">Claim your reward <i class="ti ti-arrow-right" style="font-size:15px;vertical-align:-2px;margin-left:4px" aria-hidden="true"></i></a>
 
   <div class="trust">
-    <span class="trust-item"><i class="ti ti-shield-check" style="font-size:14px" aria-hidden="true"></i> Verified</span>
-    <span class="trust-item"><i class="ti ti-lock" style="font-size:14px" aria-hidden="true"></i> Secure</span>
-    <span class="trust-item"><i class="ti ti-world" style="font-size:14px" aria-hidden="true"></i> US · UK · AU · CA</span>
+    <span class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> Verified</span>
+    <span class="trust-item"><i class="ti ti-lock" aria-hidden="true"></i> Secure</span>
+    <span class="trust-item"><i class="ti ti-check" aria-hidden="true"></i> Free to join</span>
   </div>
 
-  <p class="footer-note">Verification required. Reward issued after all steps are completed.</p>
+  <div class="footnote">
+    Available in selected countries only
+    <div class="countries">
+      <span class="flag-pill">🇺🇸 United States</span>
+      <span class="flag-pill">🇬🇧 United Kingdom</span>
+      <span class="flag-pill">🇦🇺 Australia</span>
+      <span class="flag-pill">🇨🇦 Canada</span>
+    </div>
+  </div>
 
 </div>
